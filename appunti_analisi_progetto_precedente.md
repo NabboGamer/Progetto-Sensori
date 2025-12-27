@@ -20,4 +20,11 @@ Nella funzione ```estrapolaVolumeVene``` vengono impostati harcoded i parametri:
 Bisogna capire se questa è la soluzione ottimale...
 
 
-## OSSERVAZIONE SU PARAGRAFO: 7.5 BINARIZZAZIONE
+## OSSERVAZIONE SU PARAGRAFO: 7.5.1 Calcolo del vettore fine binarizzazione
+Viene detto che: "Per evitare di considerare componenti non di interesse ma conservare solo le vene è stato provato che la media dei primi due massimi riesce a considerare bene la vena principale, obbiettivo di questa fase.". Ma non mi è chiaro da dove venga questa affermazione, e come faccio a validarla veramente...
+
+Nella funzione ```contaCC(...)``` viene utilizzata come dimensione di una componente connessa per essere considerata ```20 pixel```. Bisognerebbe valuare il perchè di questa scelta e capire se è una scelta ottima/accettabile.
+
+## OSSERVAZIONE SU PARAGRAFO: 7.5.3 Calcolo vettore distanza minima tra le vene e il palmo
+Viene fatta la seguente assunzione "La coordinata Z del palmo meno la prima coordinata a partire dal palmo che contiene 3 pixel consecutivi pari a 1." come faccio a die che funziona in senso generale...
+

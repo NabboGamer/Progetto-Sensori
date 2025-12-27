@@ -1,0 +1,6 @@
+addpath([cd,'/utility']) 
+addpath([cd,'/estrapolazione']) 
+addpath([cd,'/binarizzazione']) 
+addpath([cd,'/inspessimento']) 
+addpath([cd,'/filtraggio']) 
+addpath([cd,'/affinamento']) 
