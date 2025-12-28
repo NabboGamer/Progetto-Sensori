@@ -23,7 +23,7 @@ function [vettoreDistanze, matriceDiametri] = calcolaMinDistVenePalmo(volume, vo
     volumePalmo(:,1:50,:) = 0;
     volumePalmo(:,600:650,:) = 0;
 
-    % 2) Ulteriore taglio bordi con funzione dedicata (presumibilmente rimuove padding/artefatti)
+    % 2) Ulteriore taglio bordi con funzione dedicata
     volume      = tagliaBordi(volume);
     volumePalmo = tagliaBordi(volumePalmo);
 

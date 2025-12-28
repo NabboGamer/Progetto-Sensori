@@ -126,7 +126,7 @@ function [volBin, diametriValidi] = binarizzaVolume(Mn, mascheraNeroTotale, indi
         parfor y = 1:yDim
             fine = vecFine(y) + costanteDiametroVene;
 
-            [MatBinaria] = binIncrementalePiano(MatBin, Minv, indiciPalmoNoPelle, fine, 1, ...
+            MatBinaria = binIncrementalePiano(MatBin, Minv, indiciPalmoNoPelle, fine, 1, ...
                                                 sogliaIniziale, sogliaFinale, xDim, y);
 
             % Qui MatBinaria viene scritto/letto piano-per-piano, e MatFinale raccoglie l'output
