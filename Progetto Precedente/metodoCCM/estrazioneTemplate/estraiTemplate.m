@@ -27,12 +27,12 @@ tic;
 %% 3) Binarizzazione del volume
 [volumeBin,vecFine] = effettuaBinarizzazione(Mnp,volumePalmo, mascheraAcqua, mascheraNeroTotale,indiciPalmoNoPelle, utente, acquisizione, size(Yc,1),0);
 
-% %% 4) Isolamento del pattern venoso
-% [volIsolato] = isolaPatternVenoso(volumeBin,utente,acquisizione,0);
-% 
-% %% 5) Inspessimento del pattern venoso
-% [volSpesso,sogliaGauss] = inspessimento(volIsolato,utente,acquisizione,-1,0);
-% 
+%% 4) Isolamento del pattern venoso
+volIsolato = isolaPatternVenoso(volumeBin,utente,acquisizione,0);
+
+%% 5) Inspessimento del pattern venoso
+[volSpesso,sogliaGauss] = inspessimento(volIsolato,utente,acquisizione,-1,0);
+
 % %% 6) Filtraggio delle componenti connesse
 % [volFilt] = filtraComponentiConnesse(volSpesso,5000,indiciPalmoNoPelle,vecFine,utente,acquisizione,0);
 % 
