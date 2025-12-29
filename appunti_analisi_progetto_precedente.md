@@ -28,3 +28,5 @@ Nella funzione ```contaCC(...)``` viene utilizzata come dimensione di una compon
 ## OSSERVAZIONE SU PARAGRAFO: 7.5.3 Calcolo vettore distanza minima tra le vene e il palmo
 Viene fatta la seguente assunzione "La coordinata Z del palmo meno la prima coordinata a partire dal palmo che contiene 3 pixel consecutivi pari a 1." come faccio a die che funziona in senso generale...
 
+## OSSERVAZIONE SU PARAGRAFO: 7.8
+La procedura è estremamente complicata bisognerebbe capire se è utile in senso generale e se magari può essere snellita.

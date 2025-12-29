@@ -36,9 +36,9 @@ volIsolato = isolaPatternVenoso(volumeBin,utente,acquisizione,0);
 %% 6) Filtraggio delle componenti connesse
 [volFilt] = filtraComponentiConnesse(volSpesso,5000,indiciPalmoNoPelle,vecFine,utente,acquisizione,0);
 
-% %% 7) Smoothing delle vene
-% [volumeAffinato] = affinaVene(volFilt,indiciPalmoNoPelle,vecFine,utente,acquisizione,0);
-% 
+%% 7) Smoothing delle vene
+[volumeAffinato] = affinaVene(volFilt,indiciPalmoNoPelle,vecFine,utente,acquisizione,0);
+
 % %% 8) Visualizzazione del pattern venoso estratto
 % visualizzaVene(volumeAffinato,X,Yi,Z,Xc,Yc,utente,acquisizione);
 % 
