@@ -17,7 +17,7 @@ caricaAcquisizione;
 printTestoCornice(strcat("Estrazione template ",utente,"_0",acquisizione),'+');
 avviaPoolParallelo;
 
-tic; 
+tic;
 %% 1) Cropping della matrice M
 [Mc,Xc,Yc,Yi] = cropMatrice(M,X,Y);
 
@@ -33,9 +33,9 @@ volIsolato = isolaPatternVenoso(volumeBin,utente,acquisizione,0);
 %% 5) Inspessimento del pattern venoso
 [volSpesso,sogliaGauss] = inspessimento(volIsolato,utente,acquisizione,-1,0);
 
-% %% 6) Filtraggio delle componenti connesse
-% [volFilt] = filtraComponentiConnesse(volSpesso,5000,indiciPalmoNoPelle,vecFine,utente,acquisizione,0);
-% 
+%% 6) Filtraggio delle componenti connesse
+[volFilt] = filtraComponentiConnesse(volSpesso,5000,indiciPalmoNoPelle,vecFine,utente,acquisizione,0);
+
 % %% 7) Smoothing delle vene
 % [volumeAffinato] = affinaVene(volFilt,indiciPalmoNoPelle,vecFine,utente,acquisizione,0);
 % 
