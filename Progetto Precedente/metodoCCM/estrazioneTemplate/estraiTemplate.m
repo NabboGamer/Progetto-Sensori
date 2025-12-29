@@ -39,12 +39,12 @@ volIsolato = isolaPatternVenoso(volumeBin,utente,acquisizione,0);
 %% 7) Smoothing delle vene
 [volumeAffinato] = affinaVene(volFilt,indiciPalmoNoPelle,vecFine,utente,acquisizione,0);
 
-% %% 8) Visualizzazione del pattern venoso estratto
-% visualizzaVene(volumeAffinato,X,Yi,Z,Xc,Yc,utente,acquisizione);
-% 
-% %% 9) Salvataggio del template
-% salvaTemplate;
-% 
-% elapsedTime = toc;  
-% disp(newline);
-% fprintf('Durata estrazione template: %.2f secondi\n', elapsedTime);
+%% 8) Visualizzazione del pattern venoso estratto
+visualizzaVene(volumeAffinato,X,Yi,Z,Xc,Yc,utente,acquisizione);
+
+%% 9) Salvataggio del template
+salvaTemplate;
+
+elapsedTime = toc;  
+disp(newline);
+fprintf('Durata estrazione template: %.2f secondi\n', elapsedTime);
