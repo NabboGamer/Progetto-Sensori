@@ -91,7 +91,7 @@ function [volumePezzi] = recuperaPezzi(volume, componenti, volumeCCpiccole, indi
         matCordPallini = nan(cc_pallini.NumObjects, 3);
 
         % Scorro tutti i pallini e prendo quelli entro distanza_soglia dal pezzo (parallelo)
-        parfor j = 1:cc_pallini.NumObjects
+        for j = 1:cc_pallini.NumObjects
             pallino = false(size(volumeCCpiccole));
             pallino(cc_pallini.PixelIdxList{j}) = true;
 

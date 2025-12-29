@@ -10,7 +10,7 @@ if isempty(pool)
     
     while ~success && attempt <= maxAttempts
         try
-            parpool('local');  % Crea un parpool locale con il numero di core predefinito
+            parpool("Processes", 2);  % Crea un parpool locale con il numero di core predefinito
             success = true;  % Se parpool si avvia, imposta success a true
             disp('Parpool avviato con successo.');
         catch ME
