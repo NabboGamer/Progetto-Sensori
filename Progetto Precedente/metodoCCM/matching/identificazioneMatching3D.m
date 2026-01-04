@@ -1,4 +1,3 @@
-%% CALCOLA_SCORE_MATCHING3D  Crea una tabella di score per il matching 3D di template selezionati
 %  MANUELE CAPECE - CHIARA CAPORALE - GIANFRANCO MANFREDA
 %
 %  DESCRIZIONE
