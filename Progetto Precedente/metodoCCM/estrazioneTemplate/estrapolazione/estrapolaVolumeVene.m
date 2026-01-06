@@ -121,7 +121,7 @@ function [volumePalmo,Mnp,mascheraAcqua,mascheraNeroPalmo,mascheraNeroTotale,ind
     mascheraAcqua = permute(mascheraAcqua, [3,2,1]);
     
     % Visualizzo il volume di partenza (già ripulito dall'acqua) nel nuovo orientamento
-    graficoVolshow(Mstart, '1) Volume di partenza', utente, acquisizione, 0);
+    graficoVolshow(Mstart, 'Mstart - post rimozione acqua', utente, acquisizione, show);
 
     %Calcolo le maschere e il volume palmo 
     offsetPelle = 10;
@@ -129,7 +129,7 @@ function [volumePalmo,Mnp,mascheraAcqua,mascheraNeroPalmo,mascheraNeroTotale,ind
     mascheraNeroPalmoAcqua = mascheraNeroPalmo | mascheraAcqua;
     Mnp = Mstart;
     Mnp(mascheraNeroPalmoAcqua) = 0;
-    graficoVolshow(Mnp,'Mnp - rimuoviNeroPalmo',utente,acquisizione,show);
+    graficoVolshow(Mnp,'Mnp - post rimozione nero palmo', utente, acquisizione, show);
 
     % Trova l'indice del primo elemento diverso da zero lungo la terza dimensione
     [~, indiciPalmo] = max(volumePalmo ~= 0, [], 3);
