@@ -41,7 +41,7 @@ function [volBinFinal, vecProcessed] = effettuaBinarizzazione(Mnp, volumePalmo, 
     vecFineBin = calcolaVecFineBin(Mnp, mascheraNeroTotale, mascheraAcqua, indiciPalmoNoPelle, utente, acquisizione);
 
     % vecProcessed: interpolazione NaN + smoothing -> vettore fine più regolare e completo (lunghezza yDim)
-    vecProcessed = processaVettore(vecFineBin, 'iniziale', yDim, 0);
+    vecProcessed = processaVettore(vecFineBin, 'iniziale', yDim, 1);
 
     % Se il volume binario finale è già stato calcolato in precedenza, lo carico e termino
     if exist(filename, 'file') == 2

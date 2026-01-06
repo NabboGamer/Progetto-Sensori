@@ -136,3 +136,5 @@ function [volBin, diametriValidi] = binarizzaVolume(Mn, mascheraNeroTotale, indi
         % Output volume binario finale
         volBin = MatFinale;
     end
+    
+end
