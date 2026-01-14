@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0" pages="3">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0" pages="4">
   <diagram name="Schematizzazione binarizzazione" id="hhgYoiJJg20BP5B7_aHz">
     <mxGraphModel dx="2066" dy="1202" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="1">
       <root>
@@ -392,7 +392,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="rvmH7o1tqxDlZST14Wse" name="2. Binarizzazione iniziale e pulizia morfologica">
-    <mxGraphModel dx="1053" dy="994" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3240" dy="3977" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -568,6 +568,377 @@
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <mxPoint x="1981" y="2682" as="sourcePoint" />
             <mxPoint x="2031" y="2632" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Rcb4Ulj315HJFDBoAXqz" name="3. Stima distanze vene–palmo e stima dei diametri">
+    <mxGraphModel dx="3808" dy="4772" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4tCdNtZr2uV6--7FcBpU-1" edge="1" parent="1" source="4tCdNtZr2uV6--7FcBpU-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="4tCdNtZr2uV6--7FcBpU-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4tCdNtZr2uV6--7FcBpU-2" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;align=center;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;volumeSeparato&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;volumePalmo&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;utente&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;acquisizione&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="135" width="247" x="-178" y="313" as="geometry" />
+        </mxCell>
+        <mxCell id="4tCdNtZr2uV6--7FcBpU-3" edge="1" parent="1" source="4tCdNtZr2uV6--7FcBpU-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="LaZIfuHBK3oH80YwyA6e-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="245" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4tCdNtZr2uV6--7FcBpU-4" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;START&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="100" x="194.5" y="350.5" as="geometry" />
+        </mxCell>
+        <mxCell id="LaZIfuHBK3oH80YwyA6e-3" edge="1" parent="1" source="LaZIfuHBK3oH80YwyA6e-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="LaZIfuHBK3oH80YwyA6e-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LaZIfuHBK3oH80YwyA6e-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Azzera manualmente fasce laterali in x (taglio regioni note come spurie/rumorose) per entrambi i volumi&lt;/font&gt;" vertex="1">
+          <mxGeometry height="103.5" width="177.5" x="155.75" y="464" as="geometry" />
+        </mxCell>
+        <mxCell id="LaZIfuHBK3oH80YwyA6e-5" edge="1" parent="1" source="LaZIfuHBK3oH80YwyA6e-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="LaZIfuHBK3oH80YwyA6e-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LaZIfuHBK3oH80YwyA6e-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&amp;nbsp;Ulteriore taglio bordi con funzione dedicata &quot;tagliaBordi&quot;. Tale funzione&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; font-size: 15px;&quot;&gt;applica quattro condizioni lineari sul piano (x,y) che&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;identificano quattro regioni triangolari agli angoli dell&#39;immagine:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;alto-sinistra, basso-sinistra, alto-destra, basso-destra. Tutti i voxel&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;appartenenti a tali regioni vengono posti a 0, per ogni z&lt;/span&gt;" vertex="1">
+          <mxGeometry height="154" width="328.25" x="80.38" y="622" as="geometry" />
+        </mxCell>
+        <mxCell id="LaZIfuHBK3oH80YwyA6e-7" edge="1" parent="1" source="LaZIfuHBK3oH80YwyA6e-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="LaZIfuHBK3oH80YwyA6e-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LaZIfuHBK3oH80YwyA6e-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;Assegnazione del valore 3 alla variabile &quot;numVoxelVena&quot;. Tale variabile rappresenta il numero di voxel vena richiesti in una colonna per considerare la misura affidabile&lt;/span&gt;" vertex="1">
+          <mxGeometry height="114" width="252.63" x="118.18" y="831" as="geometry" />
+        </mxCell>
+        <mxCell id="LaZIfuHBK3oH80YwyA6e-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;Crea e assegna a Nan la variabile &quot;vettoreDistanze&quot;.&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;Crea e assegna a Nan(per ora) tre variabili che saranno utili in seguito ovvero &quot;vettoreDiametri&quot;, &quot;vettoreDistanzeDiametri&quot; e &quot;matriceDiametri&quot;. In realtà i primi due vettori colonna saranno alla fine travasati nella matrice per facilitarne l&#39;uso. Come è possibile intuire dal nome i due vettori sono strutture utili per salvare i diametri delle vene e la distanza a cui sono stati stimati&lt;/span&gt;" vertex="1">
+          <mxGeometry height="260" width="252.81" x="118" y="966" as="geometry" />
+        </mxCell>
+        <mxCell id="1qSLl51Efl4E-89DO83e-1" edge="1" parent="1" source="LaZIfuHBK3oH80YwyA6e-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="1qSLl51Efl4E-89DO83e-2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="254" y="1259" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1qSLl51Efl4E-89DO83e-2" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;rounded=1;strokeWidth=1;arcSize=12;" value="PARFOR&lt;div&gt;y = 1 : size(volumeSeparato,1)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="162" width="204" x="142.51" y="1271" as="geometry" />
+        </mxCell>
+        <mxCell id="1qSLl51Efl4E-89DO83e-3" edge="1" parent="1" source="1qSLl51Efl4E-89DO83e-2" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="1qSLl51Efl4E-89DO83e-7" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="243" y="1490" as="sourcePoint" />
+            <mxPoint x="38" y="1588" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1qSLl51Efl4E-89DO83e-4" connectable="0" parent="1qSLl51Efl4E-89DO83e-3" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="Nuova Iterazione (y)" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1qSLl51Efl4E-89DO83e-5" edge="1" parent="1" source="1qSLl51Efl4E-89DO83e-2" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="_bcD1k5fsUbEle9COzTe-18" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="346" y="1395" as="sourcePoint" />
+            <mxPoint x="1056" y="1356" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1qSLl51Efl4E-89DO83e-6" connectable="0" parent="1qSLl51Efl4E-89DO83e-5" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="Tutte le iterazioni&lt;div&gt;sono state&amp;nbsp;&lt;div&gt;completate&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1qSLl51Efl4E-89DO83e-9" edge="1" parent="1" source="1qSLl51Efl4E-89DO83e-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="1qSLl51Efl4E-89DO83e-8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1qSLl51Efl4E-89DO83e-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;Estrae il piano XZ delle vene e del palmo per la corrente y, salvandoli nelle varibili &quot;pianoXZVene&quot; e &quot;pianoPalmo&quot;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="114" width="252.63" x="-86" y="1591" as="geometry" />
+        </mxCell>
+        <mxCell id="1qSLl51Efl4E-89DO83e-11" edge="1" parent="1" source="1qSLl51Efl4E-89DO83e-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="1qSLl51Efl4E-89DO83e-10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1qSLl51Efl4E-89DO83e-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;div&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Pulizia morfologica del piano vene:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;erosione per eliminare pixel sottili/spuri(tramite &quot;imerode&quot;);&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&amp;nbsp;fill holes per compattare le regioni e chiudere piccoli buchi (tramite &quot;imfill&quot;).&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="139" width="253.63" x="-86" y="1772" as="geometry" />
+        </mxCell>
+        <mxCell id="1qSLl51Efl4E-89DO83e-13" edge="1" parent="1" source="1qSLl51Efl4E-89DO83e-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="1qSLl51Efl4E-89DO83e-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1qSLl51Efl4E-89DO83e-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;Selezione delle componenti connesse &quot;valide&quot; per area (filtra rumore e regioni troppo grandi). Mantiene&lt;/span&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;&amp;nbsp;solo oggetti con area tra 20 e 2500 pixel e salva nella variabile &quot;pianoCCvalide&quot;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="122" width="270.63" x="-93.5" y="1990" as="geometry" />
+        </mxCell>
+        <mxCell id="1qSLl51Efl4E-89DO83e-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;Stima un diametro di una vena del corrente piano tramite la funzione &quot;calcolaDiametroVena&quot;. Tale funzione s&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 15px;&quot;&gt;tima il diametro della vena &quot;più plausibile&quot; tra le&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;componenti connesse presenti in una slice,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;selezionando la componente più vicina al palmo (ovvero quella più superficiale) e filtrandola per forma/dimensione.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="198" width="264.63" x="-90.5" y="2193" as="geometry" />
+        </mxCell>
+        <mxCell id="Kdbc9iZhPWNm-F-G1JrC-1" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d80073;strokeColor=#A50040;fontColor=#ffffff;rounded=1;strokeWidth=1;arcSize=12;" value="FOR&lt;div&gt;x = 1 : size(volumeSeparato,2)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="162" width="197.13" x="142" y="2471" as="geometry" />
+        </mxCell>
+        <mxCell id="Kdbc9iZhPWNm-F-G1JrC-2" edge="1" parent="1" source="1qSLl51Efl4E-89DO83e-12" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" target="Kdbc9iZhPWNm-F-G1JrC-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="33" y="2362" as="sourcePoint" />
+            <mxPoint x="279" y="2226" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kdbc9iZhPWNm-F-G1JrC-3" edge="1" parent="1" source="Kdbc9iZhPWNm-F-G1JrC-1" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Kdbc9iZhPWNm-F-G1JrC-6" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="185" y="2602" as="sourcePoint" />
+            <mxPoint x="33" y="2718" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kdbc9iZhPWNm-F-G1JrC-4" connectable="0" parent="Kdbc9iZhPWNm-F-G1JrC-3" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="Nuova Iterazione (fine)" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Kdbc9iZhPWNm-F-G1JrC-5" edge="1" parent="1" source="Kdbc9iZhPWNm-F-G1JrC-1" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="_bcD1k5fsUbEle9COzTe-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="385" y="2437" as="sourcePoint" />
+            <mxPoint x="443" y="2419" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kdbc9iZhPWNm-F-G1JrC-8" edge="1" parent="1" source="Kdbc9iZhPWNm-F-G1JrC-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Kdbc9iZhPWNm-F-G1JrC-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Kdbc9iZhPWNm-F-G1JrC-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;Fissata anche la x, estrae i vettori colonna delle z dei due piani &quot;pianoPalmo&quot; e &quot;pianoCCvalide&quot; nelle rispettive variabili &quot;colonnaPalmo&quot; e &quot;colonnaCCvalide&quot;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="101" width="253.63" x="-87" y="2722" as="geometry" />
+        </mxCell>
+        <mxCell id="Kdbc9iZhPWNm-F-G1JrC-10" edge="1" parent="1" source="Kdbc9iZhPWNm-F-G1JrC-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Kdbc9iZhPWNm-F-G1JrC-9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Kdbc9iZhPWNm-F-G1JrC-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;&amp;nbsp;Estrae l&#39;indice del palmo: ultimo voxel non-zero (punto più profondo del palmo in quella colonna).&lt;/span&gt;" vertex="1">
+          <mxGeometry height="101" width="253.63" x="-87" y="2903" as="geometry" />
+        </mxCell>
+        <mxCell id="KSm1foGKsrdde8RzqOsj-10" edge="1" parent="1" source="Kdbc9iZhPWNm-F-G1JrC-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="KSm1foGKsrdde8RzqOsj-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Kdbc9iZhPWNm-F-G1JrC-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;&amp;nbsp;Estrae gli indici delle vene: ultimi numVoxelVena voxel non-zero (parte più profonda della vena). Calcola inoltre il loro numero e lo assegna a &quot;numIndici&quot;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="101" width="253.63" x="-87" y="3084" as="geometry" />
+        </mxCell>
+        <mxCell id="KSm1foGKsrdde8RzqOsj-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;Prende indiceVene(1) perché find(...,&#39;last&#39;) ritorna gli indici in ordine crescente,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;quindi (1) è il più piccolo tra quelli selezionati, cioè quello più &quot;alto&quot; dei tre. Prende&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 15px;&quot;&gt;indicePalmo e calcola la distanza in voxel lungo z tra i due. Questa distanza viene salvata per la corrente x nel vettore &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 15px;&quot;&gt;vettoreDistanzePiano&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); font-size: 15px;&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); font-size: 15px;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="173" width="247.69" x="-210" y="3412" as="geometry" />
+        </mxCell>
+        <mxCell id="KSm1foGKsrdde8RzqOsj-2" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;rounded=1;strokeWidth=1;arcSize=12;" value="IF numIndici &amp;gt;= numVoxelVena" vertex="1">
+          <mxGeometry height="106" width="226.63" x="-73.50000000000006" y="3244" as="geometry" />
+        </mxCell>
+        <mxCell id="KSm1foGKsrdde8RzqOsj-3" edge="1" parent="1" source="KSm1foGKsrdde8RzqOsj-2" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="KSm1foGKsrdde8RzqOsj-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="35.69" y="3356" as="sourcePoint" />
+            <mxPoint x="-40.31" y="3447" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KSm1foGKsrdde8RzqOsj-4" connectable="0" parent="KSm1foGKsrdde8RzqOsj-3" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="SI" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KSm1foGKsrdde8RzqOsj-5" edge="1" parent="1" source="KSm1foGKsrdde8RzqOsj-2" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="KSm1foGKsrdde8RzqOsj-7" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="35.69" y="3356" as="sourcePoint" />
+            <mxPoint x="101.69" y="3447" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KSm1foGKsrdde8RzqOsj-6" connectable="0" parent="KSm1foGKsrdde8RzqOsj-5" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="NO" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KSm1foGKsrdde8RzqOsj-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;Non fa nulla&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="37" width="120" x="119" y="3412" as="geometry" />
+        </mxCell>
+        <mxCell id="KSm1foGKsrdde8RzqOsj-8" edge="1" parent="1" source="KSm1foGKsrdde8RzqOsj-1" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="19.689999999999998" y="3556" as="sourcePoint" />
+            <mxPoint x="61" y="3685" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KSm1foGKsrdde8RzqOsj-9" edge="1" parent="1" source="KSm1foGKsrdde8RzqOsj-7" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="57" y="3680" />
+            </Array>
+            <mxPoint x="19.689999999999998" y="3556" as="sourcePoint" />
+            <mxPoint x="57" y="3680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_bcD1k5fsUbEle9COzTe-1" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" target="Kdbc9iZhPWNm-F-G1JrC-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="439" y="3689" />
+              <mxPoint x="556" y="3543" />
+              <mxPoint x="561" y="2732" />
+            </Array>
+            <mxPoint x="55" y="3684" as="sourcePoint" />
+            <mxPoint x="302" y="2592" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_bcD1k5fsUbEle9COzTe-2" connectable="0" parent="_bcD1k5fsUbEle9COzTe-1" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="Ciclo completato" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_bcD1k5fsUbEle9COzTe-5" edge="1" parent="1" source="_bcD1k5fsUbEle9COzTe-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_bcD1k5fsUbEle9COzTe-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_bcD1k5fsUbEle9COzTe-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;Per il corrente piano y salva la distanza minima tra tutte le colonne x presenti in &quot;vettoreDistanzePiano&quot;. Il risultato viene salvato per la corrente y nella variabile &quot;vettoreDistanze&quot;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="122" width="270.63" x="314" y="2269" as="geometry" />
+        </mxCell>
+        <mxCell id="_bcD1k5fsUbEle9COzTe-12" edge="1" parent="1" source="_bcD1k5fsUbEle9COzTe-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_bcD1k5fsUbEle9COzTe-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_bcD1k5fsUbEle9COzTe-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;Per il corrente piano y salva la distanza minima tra tutte le colonne x presenti in &quot;vettoreDistanzePiano&quot;. Il risultato viene salvato per la corrente y nella variabile &quot;vettoreDistanze&quot;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="122" width="270.63" x="314" y="2067" as="geometry" />
+        </mxCell>
+        <mxCell id="_bcD1k5fsUbEle9COzTe-7" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;rounded=1;strokeWidth=1;arcSize=12;" value="IF ~isnan(diametroVena)" vertex="1">
+          <mxGeometry height="106" width="226.63" x="335.99999999999994" y="1884" as="geometry" />
+        </mxCell>
+        <mxCell id="_bcD1k5fsUbEle9COzTe-8" edge="1" parent="1" source="_bcD1k5fsUbEle9COzTe-7" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="_bcD1k5fsUbEle9COzTe-13" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="441.32000000000005" y="1967" as="sourcePoint" />
+            <mxPoint x="341" y="1752" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_bcD1k5fsUbEle9COzTe-9" connectable="0" parent="_bcD1k5fsUbEle9COzTe-8" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="SI" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_bcD1k5fsUbEle9COzTe-10" edge="1" parent="1" source="_bcD1k5fsUbEle9COzTe-7" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="_bcD1k5fsUbEle9COzTe-14" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="441.32000000000005" y="1967" as="sourcePoint" />
+            <mxPoint x="578" y="1758" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_bcD1k5fsUbEle9COzTe-11" connectable="0" parent="_bcD1k5fsUbEle9COzTe-10" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="NO" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_bcD1k5fsUbEle9COzTe-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;Salva il diametro e la distanza associata rispettivamente in&amp;nbsp;vettoreDiametri e&amp;nbsp;vettoreDistanzeDiametri&lt;/span&gt;" vertex="1">
+          <mxGeometry height="122" width="188" x="258" y="1617" as="geometry" />
+        </mxCell>
+        <mxCell id="_bcD1k5fsUbEle9COzTe-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;Non fa nulla&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="37" width="120" x="523" y="1617" as="geometry" />
+        </mxCell>
+        <mxCell id="_bcD1k5fsUbEle9COzTe-16" edge="1" parent="1" source="_bcD1k5fsUbEle9COzTe-13" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" target="1qSLl51Efl4E-89DO83e-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="358" y="1609" as="sourcePoint" />
+            <mxPoint x="406" y="1529" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_bcD1k5fsUbEle9COzTe-17" edge="1" parent="1" source="_bcD1k5fsUbEle9COzTe-14" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" target="1qSLl51Efl4E-89DO83e-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="356" y="1579" as="sourcePoint" />
+            <mxPoint x="406" y="1529" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_bcD1k5fsUbEle9COzTe-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;Compone la matrice finale diametri:&lt;/span&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;&amp;nbsp;riga 1 = diametri, riga 2 = distanze associate&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="122" width="188" x="1061" y="1291" as="geometry" />
+        </mxCell>
+        <mxCell id="BuI_1b595Re2u_id1G6L-1" edge="1" parent="1" source="BuI_1b595Re2u_id1G6L-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="BuI_1b595Re2u_id1G6L-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BuI_1b595Re2u_id1G6L-2" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;END&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="100" x="1373" y="1322" as="geometry" />
+        </mxCell>
+        <mxCell id="BuI_1b595Re2u_id1G6L-3" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;align=center;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;&lt;u&gt;vettoreDistanze&lt;/u&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;matriceDiametri&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="111" width="209" x="1586" y="1296.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-26" edge="1" parent="1" source="BuI_1b595Re2u_id1G6L-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Hcgaowpx2nTJjkwR4TtR-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BuI_1b595Re2u_id1G6L-4" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;START&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="100" x="2030.12" y="1322" as="geometry" />
+        </mxCell>
+        <mxCell id="BuI_1b595Re2u_id1G6L-5" edge="1" parent="1" source="BuI_1b595Re2u_id1G6L-3" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="BuI_1b595Re2u_id1G6L-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1785" y="1352" as="sourcePoint" />
+            <mxPoint x="1817" y="1200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BuI_1b595Re2u_id1G6L-6" edge="1" parent="1" source="_bcD1k5fsUbEle9COzTe-18" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="BuI_1b595Re2u_id1G6L-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1137" y="1653" as="sourcePoint" />
+            <mxPoint x="1187" y="1603" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-1" edge="1" parent="1" source="Hcgaowpx2nTJjkwR4TtR-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Hcgaowpx2nTJjkwR4TtR-18" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Interpola linearmente i valori mancanti (NaN) usando solo i campioni validi e lo assegna a &quot;vettore_interpolato&quot;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="103.5" width="177.5" x="1991" y="1447" as="geometry" />
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;div&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;Li riempie copiando il primo valore valido disponibile&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="88" width="176.75" x="1921" y="1804" as="geometry" />
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-4" edge="1" parent="1" source="Hcgaowpx2nTJjkwR4TtR-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Hcgaowpx2nTJjkwR4TtR-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;Effettua uno smoothing con valore 150 e algoritmo &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 15px;&quot;&gt;rlowess&lt;/span&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;&quot; e lo assegna a &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 15px;&quot;&gt;vecProcessed&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); font-size: 15px;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="115" width="176.75" x="1991.37" y="1978" as="geometry" />
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-6" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;rounded=1;strokeWidth=1;arcSize=12;" value="if&amp;nbsp;&amp;nbsp;vecProcessed più corto di yDim" vertex="1">
+          <mxGeometry height="106" width="226.63" x="1966.4300000000003" y="2174" as="geometry" />
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-7" edge="1" parent="1" source="Hcgaowpx2nTJjkwR4TtR-6" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Hcgaowpx2nTJjkwR4TtR-12" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2212.75" y="2077.25" as="sourcePoint" />
+            <mxPoint x="2020.75" y="2390.25" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-8" connectable="0" parent="Hcgaowpx2nTJjkwR4TtR-7" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="SI" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-9" edge="1" parent="1" source="Hcgaowpx2nTJjkwR4TtR-6" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Hcgaowpx2nTJjkwR4TtR-11" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2253.75" y="2347.25" as="sourcePoint" />
+            <mxPoint x="2149.75" y="2390.25" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-10" connectable="0" parent="Hcgaowpx2nTJjkwR4TtR-9" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="NO" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;Non fa nulla&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="37" width="120" x="2097.75" y="2394.25" as="geometry" />
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;Aggiunge valori in coda&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;replicando l&#39;ultimo valore&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="57.25" width="136" x="1944.75" y="2389" as="geometry" />
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-13" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;END&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="100" x="2041.37" y="2517.25" as="geometry" />
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-14" edge="1" parent="1" source="Hcgaowpx2nTJjkwR4TtR-12" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="Hcgaowpx2nTJjkwR4TtR-13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="2180.75" y="2309.25" as="sourcePoint" />
+            <mxPoint x="2230.75" y="2259.25" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-15" edge="1" parent="1" source="Hcgaowpx2nTJjkwR4TtR-11" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="Hcgaowpx2nTJjkwR4TtR-13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="2180.75" y="2309.25" as="sourcePoint" />
+            <mxPoint x="2230.75" y="2259.25" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-16" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;align=center;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;vecDistProcessed&lt;/span&gt;" vertex="1">
+          <mxGeometry height="111" width="209" x="2332.75" y="2491.75" as="geometry" />
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-17" edge="1" parent="1" source="Hcgaowpx2nTJjkwR4TtR-13" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Hcgaowpx2nTJjkwR4TtR-16" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="2225.75" y="2222.25" as="sourcePoint" />
+            <mxPoint x="2275.75" y="2172.25" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-18" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;rounded=1;strokeWidth=1;arcSize=12;" value="if&amp;nbsp;&amp;nbsp;vettore_interpolato ha valori NaN" vertex="1">
+          <mxGeometry height="106" width="226.63" x="1966.81" y="1599" as="geometry" />
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-19" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Hcgaowpx2nTJjkwR4TtR-3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2080.75" y="1705" as="sourcePoint" />
+            <mxPoint x="2004.75" y="1796" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-20" connectable="0" parent="Hcgaowpx2nTJjkwR4TtR-19" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="SI" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-21" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Hcgaowpx2nTJjkwR4TtR-23" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2080.75" y="1705" as="sourcePoint" />
+            <mxPoint x="2146.75" y="1796" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-22" connectable="0" parent="Hcgaowpx2nTJjkwR4TtR-21" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="NO" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#1BA1E2,#51AFE7);strokeWidth=1;arcSize=12;fontColor=#ffffff;" value="&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;Non fa nulla&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="37" width="120" x="2129.75" y="1804" as="geometry" />
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-24" edge="1" parent="1" source="Hcgaowpx2nTJjkwR4TtR-3" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Hcgaowpx2nTJjkwR4TtR-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="2064.75" y="1905" as="sourcePoint" />
+            <mxPoint x="2114.75" y="1855" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hcgaowpx2nTJjkwR4TtR-25" edge="1" parent="1" source="Hcgaowpx2nTJjkwR4TtR-23" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Hcgaowpx2nTJjkwR4TtR-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="2064.75" y="1905" as="sourcePoint" />
+            <mxPoint x="2114.75" y="1855" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
