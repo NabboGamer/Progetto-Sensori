@@ -1,55 +1,55 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0" pages="6">
   <diagram name="Schematizzazione binarizzazione" id="hhgYoiJJg20BP5B7_aHz">
-    <mxGraphModel dx="2066" dy="1202" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="1">
+    <mxGraphModel dx="1968" dy="1145" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="1">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="slzKwT56YcZ6iQO9PIDL-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;rounded=1;fontFamily=Book Antiqua;shadow=1;perimeterSpacing=1;" value="&lt;h1&gt;&lt;font style=&quot;color: light-dark(rgb(255, 0, 0), rgb(237, 237, 237));&quot; face=&quot;Jetbrains Mono&quot;&gt;METODO CCM&lt;/font&gt;&lt;/h1&gt;" vertex="1">
+        <mxCell id="slzKwT56YcZ6iQO9PIDL-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;rounded=1;fontFamily=Book Antiqua;shadow=1;perimeterSpacing=1;" value="&lt;h1&gt;&lt;font style=&quot;color: light-dark(rgb(255, 0, 0), rgb(237, 237, 237));&quot; face=&quot;Helvetica&quot;&gt;METODO CCM&lt;/font&gt;&lt;/h1&gt;" vertex="1">
           <mxGeometry height="30" width="196" x="316" y="40" as="geometry" />
         </mxCell>
         <mxCell id="O6RRzO6pkrpzR3FPZ-6i-1" parent="1" style="swimlane;whiteSpace=wrap;html=1;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Binarizzazione" vertex="1">
-          <mxGeometry height="323" width="394" x="217" y="119" as="geometry" />
+          <mxGeometry height="1237" width="760" x="33" y="114" as="geometry" />
         </mxCell>
-        <mxCell id="O6RRzO6pkrpzR3FPZ-6i-2" parent="O6RRzO6pkrpzR3FPZ-6i-1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;shadow=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=light-dark(#000000, #51afe7);" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;1. Calcolo del vettore fine binarizzazione&lt;/span&gt;" vertex="1">
-          <mxGeometry height="28" width="342" x="26" y="46" as="geometry" />
-        </mxCell>
-        <mxCell id="O6RRzO6pkrpzR3FPZ-6i-4" parent="O6RRzO6pkrpzR3FPZ-6i-1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;shadow=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=light-dark(#000000, #51afe7);" value="&lt;font face=&quot;Helvetica&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;2.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 12pt; line-height: 116%;&quot;&gt;Binarizzazione iniziale e pulizia morfologica&lt;/span&gt;&lt;/font&gt;" vertex="1">
-          <mxGeometry height="28" width="342" x="26" y="103" as="geometry" />
+        <mxCell id="O6RRzO6pkrpzR3FPZ-6i-2" parent="O6RRzO6pkrpzR3FPZ-6i-1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;shadow=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=light-dark(#000000, #51afe7);" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 16px; background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;&lt;u&gt;&lt;i&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;1. Calcolo del vettore fine binarizzazione&lt;/i&gt;&lt;/u&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;Per ciascuna slice del volume lungo l’asse y (cioè per ogni sezione 2D del volume a y costante) si vuole stimare fino a quale profondità lungo z convenga eseguire la binarizzazione del piano, evitando di includere zone più profonde che tendono a introdurre rumore o strutture non di interesse. A questo scopo, si effettuano binarizzazioni “di prova” del piano variando progressivamente il limite superiore di profondità. Dopo ogni prova si valuta il risultato contando quante regioni separate compaiono nella maschera binaria (componenti connesse), perché questo indicatore cresce quando emergono le strutture venose ma può peggiorare se si include troppa profondità. Il valore di z che produce la configurazione più plausibile (secondo il criterio adottato sul numero di componenti) viene scelto come fine binarizzazione della slice. Ripetendo la procedura per tutte le y, si ottiene un vettore di lunghezza yDim che associa a ogni slice il proprio limite di profondità ottimale, usato poi nello step di binarizzazione definitivo.&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="248" width="705" x="26" y="46" as="geometry" />
         </mxCell>
         <mxCell id="O6RRzO6pkrpzR3FPZ-6i-5" parent="O6RRzO6pkrpzR3FPZ-6i-1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;shape=mxgraph.arrows2.arrow;dy=0.64;dx=12.04;notch=0;rotation=90;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=light-dark(#000000, #51afe7);" value="" vertex="1">
-          <mxGeometry height="18.82" width="27.77" x="182.97" y="78.95" as="geometry" />
+          <mxGeometry height="18.82" width="49.75" x="355.13" y="310.13" as="geometry" />
         </mxCell>
-        <mxCell id="O6RRzO6pkrpzR3FPZ-6i-7" parent="O6RRzO6pkrpzR3FPZ-6i-1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;shadow=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=light-dark(#000000, #51afe7);" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;3.&amp;nbsp;Stima distanze vene–palmo e stima dei diametri&lt;/span&gt;" vertex="1">
-          <mxGeometry height="28" width="377" x="10" y="160" as="geometry" />
+        <mxCell id="O6RRzO6pkrpzR3FPZ-6i-4" parent="O6RRzO6pkrpzR3FPZ-6i-1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;shadow=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=light-dark(#000000, #51afe7);" value="&lt;font face=&quot;Helvetica&quot;&gt;&lt;i&gt;&lt;u&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;2.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 12pt; line-height: 116%;&quot;&gt;Binarizzazione iniziale e pulizia morfologica&lt;/span&gt;&lt;/u&gt;&lt;/i&gt;&lt;/font&gt;&lt;div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 16px; background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;Il volume viene binarizzato piano XZ per piano (uno per ogni y). Prima si inverte il contrasto e si applica una maschera di esclusione per ignorare le zone non affidabili. Per ogni piano si soglia solo una fascia di profondità sotto la superficie del palmo, limitata dal valore estratto dal vettore del passo precedente, ottenendo una prima estrazione conservativa delle vene. Un raffinamento lungo z concentra la maschera nella profondità più plausibile.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 16px;&quot;&gt;La maschera 3D viene ripulita eliminando le componenti piccole (rumore), applicando una pulizia morfologica 3D per rimuovere connessioni spurie e uno smussamento per regolarizzare i bordi; infine si ri-binarizza e si mantiene solo ciò che ha volume sufficiente, ottenendo vene più stabili e misurabili.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;&lt;span style=&quot;font-size: 12pt; line-height: 116%;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="188" width="705" x="26" y="345" as="geometry" />
         </mxCell>
-        <mxCell id="O6RRzO6pkrpzR3FPZ-6i-8" parent="O6RRzO6pkrpzR3FPZ-6i-1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;shape=mxgraph.arrows2.arrow;dy=0.64;dx=12.04;notch=0;rotation=90;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=light-dark(#000000, #51afe7);" value="" vertex="1">
-          <mxGeometry height="18.82" width="27.77" x="183.11" y="136.005" as="geometry" />
+        <mxCell id="wWK7umypq5NlNBbwCIFZ-2" parent="O6RRzO6pkrpzR3FPZ-6i-1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;shape=mxgraph.arrows2.arrow;dy=0.64;dx=12.04;notch=0;rotation=90;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=light-dark(#000000, #51afe7);" value="" vertex="1">
+          <mxGeometry height="18.82" width="64.59" x="346.2" y="556.22" as="geometry" />
         </mxCell>
-        <mxCell id="O6RRzO6pkrpzR3FPZ-6i-9" parent="O6RRzO6pkrpzR3FPZ-6i-1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;shadow=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=light-dark(#000000, #51afe7);" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;4. Stima della soglia iniziale&amp;nbsp;&lt;/span&gt;" vertex="1">
-          <mxGeometry height="28" width="342" x="26" y="217.04499999999996" as="geometry" />
+        <mxCell id="O6RRzO6pkrpzR3FPZ-6i-7" parent="O6RRzO6pkrpzR3FPZ-6i-1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;shadow=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=light-dark(#000000, #51afe7);" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;i&gt;&lt;u&gt;3.&amp;nbsp;Stima distanze vene–palmo e stima dei diametri&lt;/u&gt;&lt;/i&gt;&lt;/span&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;Per ogni piano XZ (ogni y) stima la distanza minima lungo z tra vene segmentate e palmo; quando possibile calcola anche un diametro plausibile della vena. Prima elimina zone periferiche rumorose (taglio bordi). Poi, nel singolo piano, pulisce e filtra le vene (solo componenti di area plausibile) e ricava la distanza confrontando, per ogni colonna x, la quota del palmo con la parte più profonda della vena; salva la minima distanza del piano. Poi t&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 16px;&quot;&gt;rasforma un vettore grezzo per-slice (con NaN e oscillazioni) in un profilo continuo e stabile: interpola i valori mancanti, riempie eventuali buchi iniziali e applica uno smoothing robusto per ridurre rumore/outlier, mantenendo la lunghezza coerente con yDim.&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="183" width="705" x="26" y="598" as="geometry" />
         </mxCell>
-        <mxCell id="O6RRzO6pkrpzR3FPZ-6i-10" parent="O6RRzO6pkrpzR3FPZ-6i-1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;shape=mxgraph.arrows2.arrow;dy=0.64;dx=12.04;notch=0;rotation=90;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=light-dark(#000000, #51afe7);" value="" vertex="1">
-          <mxGeometry height="18.82" width="27.77" x="182.97000000000003" y="192.995" as="geometry" />
+        <mxCell id="wWK7umypq5NlNBbwCIFZ-3" parent="O6RRzO6pkrpzR3FPZ-6i-1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;shadow=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=light-dark(#000000, #51afe7);" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;i&gt;&lt;u&gt;4. Stima della soglia iniziale&lt;/u&gt;&lt;/i&gt;&lt;/span&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;Determina automaticamente la soglia di intensità da cui avviare la binarizzazione finale incrementale. Prova soglie da 250 a 210 e, per rendere il confronto coerente, binarizza sempre entro una profondità fissa e conservativa. Per ogni soglia conta quante componenti connesse 3D “grandi” (volume ≥ 2000 voxel) compaiono, ottenendo una curva #CC(soglia). La soglia scelta è un punto di transizione di questa curva: dopo smoothing e analisi della variazione, viene selezionato il valore in cui la crescita rapida delle componenti si stabilizza, evitando soglie troppo restrittive o troppo permissive.&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="171" width="707" x="26" y="837" as="geometry" />
         </mxCell>
-        <mxCell id="O6RRzO6pkrpzR3FPZ-6i-11" parent="O6RRzO6pkrpzR3FPZ-6i-1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;shadow=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=light-dark(#000000, #51afe7);perimeterSpacing=0;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;5. Binarizzazione finale&amp;nbsp;&lt;/span&gt;" vertex="1">
-          <mxGeometry height="28" width="342" x="25.860000000000014" y="274.05499999999995" as="geometry" />
+        <mxCell id="wWK7umypq5NlNBbwCIFZ-4" parent="O6RRzO6pkrpzR3FPZ-6i-1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;shape=mxgraph.arrows2.arrow;dy=0.64;dx=12.04;notch=0;rotation=90;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=light-dark(#000000, #51afe7);" value="" vertex="1">
+          <mxGeometry height="18.82" width="54.69" x="352.66" y="799.66" as="geometry" />
         </mxCell>
-        <mxCell id="O6RRzO6pkrpzR3FPZ-6i-12" parent="O6RRzO6pkrpzR3FPZ-6i-1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;shape=mxgraph.arrows2.arrow;dy=0.64;dx=12.04;notch=0;rotation=90;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=light-dark(#000000, #51afe7);" value="" vertex="1">
-          <mxGeometry height="18.82" width="27.77" x="183.11000000000004" y="249.995" as="geometry" />
+        <mxCell id="wWK7umypq5NlNBbwCIFZ-5" parent="O6RRzO6pkrpzR3FPZ-6i-1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;shape=mxgraph.arrows2.arrow;dy=0.64;dx=12.04;notch=0;rotation=90;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=light-dark(#000000, #51afe7);" value="" vertex="1">
+          <mxGeometry height="18.82" width="55.33" x="352.34" y="1027.32" as="geometry" />
+        </mxCell>
+        <mxCell id="wWK7umypq5NlNBbwCIFZ-6" parent="O6RRzO6pkrpzR3FPZ-6i-1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;shadow=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=light-dark(#000000, #51afe7);perimeterSpacing=0;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;i&gt;&lt;u&gt;5. Binarizzazione finale&lt;/u&gt;&lt;/i&gt;&lt;/span&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;Richiama la binarizzazione usando il vettore processato e restituito dal passo 1 come limite di profondità per-slice e una soglia incrementale dalla soglia ricavata al passo 4 a 255. La profondità di ricerca viene estesa con una stimata a partire dai diametri delle vene calcolati al passo 3. Per ogni piano XZ, i voxel vengono valutati sotto la superficie del palmo (coordinate relative) con una soglia che varia con la profondità, producendo il volume binario finale pronto per il matching.&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="147" width="709" x="26" y="1065" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="HpRlUM2JnNcYJUdAOphW" name="1. Calcolo del vettore fine binarizzazione">
-    <mxGraphModel dx="1584" dy="1193" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="5443" dy="2403" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="k3UwvEEmAkg67saGFW5p-3" edge="1" parent="1" source="TRjVio0Uxdy3Lgi0FkpK-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="k3UwvEEmAkg67saGFW5p-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="TRjVio0Uxdy3Lgi0FkpK-2" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;align=center;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Mnp&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;mascheraNeroTotale&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;mascheraAcqua&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;indiciPalmoNoPelle&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;utente&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;acquisizione&lt;/span&gt;&lt;/font&gt;" vertex="1">
-          <mxGeometry height="121" width="222" x="-698" y="139" as="geometry" />
+        <mxCell id="TRjVio0Uxdy3Lgi0FkpK-2" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;align=center;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Mnp(volume del palmo ripulito dall&#39;acqua e dal rumore)&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;mascheraNeroTotale(maschera atta alla rimozione sia dell&#39;acqua che del rumore)&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;mascheraAcqua (&lt;/span&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;maschera atta alla rimozione dell&#39;acqua&lt;/span&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;)&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;indiciPalmoNoPelle(vettore di indici che specificano da dove comincia la parte di volume che non include la pelle del palmo)&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;utente(stringa che contiene il nome dell&#39;utente corrente)&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;acquisizione&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;(stringa che contiene l&#39;acquisizione dell&#39;utente corrente)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="121" width="1181" x="-1657" y="139" as="geometry" />
         </mxCell>
         <mxCell id="k3UwvEEmAkg67saGFW5p-6" edge="1" parent="1" source="TRjVio0Uxdy3Lgi0FkpK-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="k3UwvEEmAkg67saGFW5p-5" value="">
           <mxGeometry relative="1" as="geometry" />
@@ -90,8 +90,8 @@
         <mxCell id="k3UwvEEmAkg67saGFW5p-18" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;END&lt;/font&gt;" vertex="1">
           <mxGeometry height="60" width="100" x="624" y="918" as="geometry" />
         </mxCell>
-        <mxCell id="k3UwvEEmAkg67saGFW5p-20" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;align=center;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;vecFineBin&lt;/span&gt;" vertex="1">
-          <mxGeometry height="111" width="209" x="894" y="892.5" as="geometry" />
+        <mxCell id="k3UwvEEmAkg67saGFW5p-20" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;align=center;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;vecFineBin&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;+&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;&quot;iniziale&quot;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;yDim&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;0(se mostrare il volume)&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="111" width="287" x="894" y="892.5" as="geometry" />
         </mxCell>
         <mxCell id="k3UwvEEmAkg67saGFW5p-22" edge="1" parent="1" source="k3UwvEEmAkg67saGFW5p-16" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="k3UwvEEmAkg67saGFW5p-27" value="">
           <mxGeometry relative="1" as="geometry">
@@ -388,11 +388,26 @@
             <mxPoint x="1405" y="1491" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="sEO_gosl2riHo8kK0w3T-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="-1096.5" y="109" as="geometry" />
+        </mxCell>
+        <mxCell id="sEO_gosl2riHo8kK0w3T-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;OUTPUT/INPUT&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="130.5" x="972.25" y="862.5" as="geometry" />
+        </mxCell>
+        <mxCell id="sEO_gosl2riHo8kK0w3T-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="74" x="1690.5" y="2097.75" as="geometry" />
+        </mxCell>
+        <mxCell id="cfWVxLSol2xeAJnoLT8_-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;rounded=1;fontFamily=Book Antiqua;shadow=1;perimeterSpacing=1;" value="&lt;h1&gt;&lt;font color=&quot;#ff0000&quot; face=&quot;Helvetica&quot;&gt;[vecFineBin] = calcolaVecFineBin(Mn, mascheraNeroTotale, mascheraAcqua, indiciPalmoNoPelle, utente, acquisizione)&lt;/font&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="62" width="1402" x="-991.5" y="-98" as="geometry" />
+        </mxCell>
+        <mxCell id="cfWVxLSol2xeAJnoLT8_-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;rounded=1;fontFamily=Book Antiqua;shadow=1;perimeterSpacing=1;" value="&lt;h1&gt;&lt;font color=&quot;#ff0000&quot; face=&quot;Helvetica&quot;&gt;[vecProcessed] = processaVettore(vecFine, fase, yDim, show)&lt;/font&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="62" width="749" x="995.5" y="682" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="rvmH7o1tqxDlZST14Wse" name="2. Binarizzazione iniziale e pulizia morfologica">
-    <mxGraphModel dx="1184" dy="1193" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="5965" dy="3005" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -483,7 +498,7 @@
         <mxCell id="cV-BsEVBF531Gqp5BIEr-2" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;END&lt;/font&gt;" vertex="1">
           <mxGeometry height="60" width="100" x="1217" y="998" as="geometry" />
         </mxCell>
-        <mxCell id="cV-BsEVBF531Gqp5BIEr-3" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;align=center;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;volBin&lt;/span&gt;" vertex="1">
+        <mxCell id="cV-BsEVBF531Gqp5BIEr-3" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;align=center;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;volBin&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;+&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;utente&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;acquisizione&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;0&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="111" width="209" x="1430" y="972.5" as="geometry" />
         </mxCell>
         <mxCell id="cV-BsEVBF531Gqp5BIEr-4" edge="1" parent="1" source="zEcR5QG2FlwIigJxaG-b-2" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="cV-BsEVBF531Gqp5BIEr-6" value="">
@@ -570,19 +585,34 @@
             <mxPoint x="2031" y="2632" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="-WqiuVrBCRwQPjUE8Cv3-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;rounded=1;fontFamily=Book Antiqua;shadow=1;perimeterSpacing=1;" value="&lt;h1&gt;&lt;font style=&quot;&quot;&gt;&lt;font color=&quot;#ff0000&quot; face=&quot;Helvetica&quot;&gt;[volBin, diametriValidi] = binarizzaVolume(Mn, mascheraNeroTotale, indiciPalmoNoPelle, vecFine,&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;color: rgb(255, 0, 0); font-family: Helvetica; background-color: transparent;&quot;&gt;&amp;nbsp;matriceDiametri, sogliaIniziale, sogliaFinale, show)&lt;/span&gt;&lt;/font&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="62" width="1765.63" x="-750.31" y="103" as="geometry" />
+        </mxCell>
+        <mxCell id="-WqiuVrBCRwQPjUE8Cv3-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;rounded=1;fontFamily=Book Antiqua;shadow=1;perimeterSpacing=1;" value="&lt;h1&gt;&lt;font color=&quot;#ff0000&quot; face=&quot;Helvetica&quot;&gt;[volumeGaussCleaned] = separaStrutture(volBin, utente, acquisizione, show)&lt;/font&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="62" width="895.63" x="1472.18" y="808" as="geometry" />
+        </mxCell>
+        <mxCell id="Eapykbk9_S9kDkhMEVqx-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="-193.5" y="263" as="geometry" />
+        </mxCell>
+        <mxCell id="-CIUoCJnlpi2tO_83BUt-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;OUTPUT/INPUT&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="130.5" x="1469.25" y="942.5" as="geometry" />
+        </mxCell>
+        <mxCell id="-CIUoCJnlpi2tO_83BUt-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="74" x="2230.88" y="2480" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="Rcb4Ulj315HJFDBoAXqz" name="3. Stima distanze vene–palmo e stima dei diametri">
-    <mxGraphModel dx="1825" dy="2169" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3555" dy="1603" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="4tCdNtZr2uV6--7FcBpU-1" edge="1" parent="1" source="4tCdNtZr2uV6--7FcBpU-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="4tCdNtZr2uV6--7FcBpU-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4tCdNtZr2uV6--7FcBpU-2" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;align=center;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;volumeSeparato&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;volumePalmo&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;utente&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;acquisizione&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="135" width="247" x="-178" y="313" as="geometry" />
+        <mxCell id="4tCdNtZr2uV6--7FcBpU-2" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;align=center;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;volumeSeparato&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;volumePalmo(&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 15px;&quot;&gt;volume che contiene SOLO il palmo&lt;/span&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;utente&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;acquisizione&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="135" width="474" x="-405" y="313" as="geometry" />
         </mxCell>
         <mxCell id="4tCdNtZr2uV6--7FcBpU-3" edge="1" parent="1" source="4tCdNtZr2uV6--7FcBpU-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="LaZIfuHBK3oH80YwyA6e-1" value="">
           <mxGeometry relative="1" as="geometry">
@@ -818,7 +848,7 @@
         <mxCell id="BuI_1b595Re2u_id1G6L-2" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;END&lt;/font&gt;" vertex="1">
           <mxGeometry height="60" width="100" x="1373" y="1322" as="geometry" />
         </mxCell>
-        <mxCell id="BuI_1b595Re2u_id1G6L-3" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;align=center;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;&lt;u&gt;vettoreDistanze&lt;/u&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;matriceDiametri&lt;/span&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="BuI_1b595Re2u_id1G6L-3" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;align=center;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;&lt;u&gt;vecDist&lt;/u&gt;&lt;/span&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;matriceDiametri&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;+&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;&quot;finale&quot;&lt;br&gt;yDim&lt;br&gt;0&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="111" width="209" x="1586" y="1296.5" as="geometry" />
         </mxCell>
         <mxCell id="Hcgaowpx2nTJjkwR4TtR-26" edge="1" parent="1" source="BuI_1b595Re2u_id1G6L-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Hcgaowpx2nTJjkwR4TtR-2" value="">
@@ -941,11 +971,26 @@
             <mxPoint x="2114.75" y="1855" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="iAdtFIC7p7D_YdHd2_6R-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;rounded=1;fontFamily=Book Antiqua;shadow=1;perimeterSpacing=1;" value="&lt;h1&gt;&lt;font color=&quot;#ff0000&quot; face=&quot;Helvetica&quot;&gt;[vettoreDistanze, matriceDiametri] = calcolaMinDistVenePalmo(volume, volumePalmo, utente, acquisizione)&lt;/font&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="62" width="1256.31" x="-383.74999999999994" y="172" as="geometry" />
+        </mxCell>
+        <mxCell id="iAdtFIC7p7D_YdHd2_6R-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="-198" y="283" as="geometry" />
+        </mxCell>
+        <mxCell id="iAdtFIC7p7D_YdHd2_6R-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;OUTPUT/INPUT&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="130.5" x="1625.25" y="1266.5" as="geometry" />
+        </mxCell>
+        <mxCell id="iAdtFIC7p7D_YdHd2_6R-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="2407.25" y="2461.75" as="geometry" />
+        </mxCell>
+        <mxCell id="iAdtFIC7p7D_YdHd2_6R-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;rounded=1;fontFamily=Book Antiqua;shadow=1;perimeterSpacing=1;" value="&lt;h1&gt;&lt;font color=&quot;#ff0000&quot; face=&quot;Helvetica&quot;&gt;[vecProcessed] = processaVettore(vecFine, fase, yDim, show)&lt;/font&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="62" width="732.03" x="1714.1100000000001" y="1118" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="Mwzy4Apkidm6Wy5nie3H" name="4. Stima della soglia iniziale ">
-    <mxGraphModel dx="1568" dy="2386" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="6303" dy="3434" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1110,7 +1155,7 @@
         <mxCell id="-WEHtr9DqKmZJN_BAfBk-2" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;END&lt;/font&gt;" vertex="1">
           <mxGeometry height="60" width="100" x="3378" y="1345.01" as="geometry" />
         </mxCell>
-        <mxCell id="-WEHtr9DqKmZJN_BAfBk-3" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;align=center;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;soglia&lt;/span&gt;" vertex="1">
+        <mxCell id="-WEHtr9DqKmZJN_BAfBk-3" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;align=center;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;sogliaIniziale&lt;/span&gt;" vertex="1">
           <mxGeometry height="111" width="209" x="3591" y="1319.51" as="geometry" />
         </mxCell>
         <mxCell id="-WEHtr9DqKmZJN_BAfBk-4" edge="1" parent="1" source="FLv4_bndjTYw5_KsrSf3-18" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="-WEHtr9DqKmZJN_BAfBk-2" value="">
@@ -1119,11 +1164,20 @@
             <mxPoint x="3192" y="1626.01" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="wbLUYto820gvqkG-3ymq-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;rounded=1;fontFamily=Book Antiqua;shadow=1;perimeterSpacing=1;" value="&lt;h1&gt;&lt;font color=&quot;#ff0000&quot; face=&quot;Helvetica&quot;&gt;[soglia] = calcolaSogliaIniziale(Mnp, mascheraNeroTotale, indiciPalmoNoPelle, vecDistProcessed, show)&lt;/font&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="62" width="1256.31" x="-141.6599999999999" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="qyFPEb9MLVppOFH_KqLE-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="157.5" y="268" as="geometry" />
+        </mxCell>
+        <mxCell id="qyFPEb9MLVppOFH_KqLE-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="3665.5" y="1289.51" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="mWlPRMNnsxZ-dUvxamYU" name="5. Binarizzazione finale">
-    <mxGraphModel dx="2368" dy="2786" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="7103" dy="3834" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1423,7 +1477,7 @@
         <mxCell id="r3wdoL8PfX_vqh5rwNkb-2" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;END&lt;/font&gt;" vertex="1">
           <mxGeometry height="60" width="100" x="3108" y="750" as="geometry" />
         </mxCell>
-        <mxCell id="r3wdoL8PfX_vqh5rwNkb-3" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;align=center;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;volBin&lt;/span&gt;" vertex="1">
+        <mxCell id="r3wdoL8PfX_vqh5rwNkb-3" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;align=center;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;volBinFinal&lt;/span&gt;" vertex="1">
           <mxGeometry height="111" width="209" x="3321" y="724.5" as="geometry" />
         </mxCell>
         <mxCell id="r3wdoL8PfX_vqh5rwNkb-4" edge="1" parent="1" source="newyynsGCe_0uezWqp77-10" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="r3wdoL8PfX_vqh5rwNkb-2" value="">
@@ -1431,6 +1485,15 @@
             <mxPoint x="2977" y="779.99" as="sourcePoint" />
             <mxPoint x="2922" y="1031" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="wXGl9Es5LjomokKmDFfU-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;rounded=1;fontFamily=Book Antiqua;shadow=1;perimeterSpacing=1;" value="&lt;h1&gt;&lt;font face=&quot;Helvetica&quot;&gt;&lt;font color=&quot;#ff0000&quot;&gt;[volBin, diametriValidi] = binarizzaVolume(Mn, mascheraNeroTotale, indiciPalmoNoPelle, vecFine,&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;color: rgb(255, 0, 0); background-color: transparent;&quot;&gt;matriceDiametri, sogliaIniziale, sogliaFinale, show)&lt;/span&gt;&lt;/font&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="62" width="1718" x="-1085.37" y="-217" as="geometry" />
+        </mxCell>
+        <mxCell id="wEVB-Nl40wZ6EJOPa72L-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="-554.5" y="-103" as="geometry" />
+        </mxCell>
+        <mxCell id="wEVB-Nl40wZ6EJOPa72L-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="3395.5" y="692" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
