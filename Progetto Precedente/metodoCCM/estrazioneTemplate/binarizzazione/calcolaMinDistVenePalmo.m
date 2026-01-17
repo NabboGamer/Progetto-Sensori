@@ -70,7 +70,7 @@ function [vettoreDistanze, matriceDiametri] = calcolaMinDistVenePalmo(volume, vo
         pianoCCvalide = ismember(L, areeValide);
 
         % 6) Stimo un diametro vena nel piano (funzione custom)
-        %    (verosimilmente usa pianoCCvalide e la geometria del palmo per calcolare un diametro "sensato")
+        %    (usa pianoCCvalide e la geometria del palmo per calcolare un diametro "sensato")
         diametroVena = calcolaDiametroVena(pianoCCvalide, pianoPalmo, y);
 
         % 7) Calcolo, per ogni x, la distanza vene↔palmo lungo z e poi scelgo la minima
