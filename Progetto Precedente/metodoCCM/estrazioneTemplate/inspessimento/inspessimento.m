@@ -82,7 +82,7 @@ function [volSpesso, soglia] = inspessimento(volume, utente, acquisizione, sogli
     volSpesso = binarizza(volumeGauss, 'manuale', soglia);
 
     % Visualizzazione del risultato finale
-    graficoVolshow(volSpesso, 'Volume inspessito', utente, acquisizione, show);
+    graficoVolshow(volSpesso, 'volSpesso - Volume inspessito', "", "", show);
 
     % Creazione cartella se non esiste
     if ~exist(folderPath, 'dir')

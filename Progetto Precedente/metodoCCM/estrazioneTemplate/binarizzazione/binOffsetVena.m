@@ -30,7 +30,7 @@ function [pianoFinale] = binOffsetVena(Mat, xDim, zDim, y)
     % tab.Centroid è una cell/array Nx1 di vettori [x, z], quindi prendo la seconda componente.
     colonnaCordZCentroid = tab.Centroid(:,2);
 
-    % Scelgo come quota di riferimento il centroid più "superficiale" (z minimo),
+    % Scelgo come quota di riferimento il centroide più "superficiale" (z minimo),
     % arrotondato a indice intero.
     idZcent = round(min(colonnaCordZCentroid));
 

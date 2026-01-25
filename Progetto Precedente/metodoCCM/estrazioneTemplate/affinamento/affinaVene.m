@@ -136,7 +136,7 @@ function [volumeFilled] = affinaVene(volume,indiciPalmoNoPelle,vecFine,utente,ac
     % Ricompongo: vene filtrate + CC piccole + recupero
     volumeAffinato = volumeFilt | volumeCCPiccole | volumeRecuperato;
 
-    graficoVolshow(volumeAffinato,'Volume affinato dai disturbi',utente,acquisizione,show);
+    graficoVolshow(volumeAffinato,'volumeAffinato - Volume affinato dai disturbi',"","",show);
 
     %% --- 5) Post-processing globale (smoothing + closing + rimozione CC "corte") ---
     volumeAffinato = filtGaussVol(volumeAffinato,1,30);
@@ -147,7 +147,7 @@ function [volumeFilled] = affinaVene(volume,indiciPalmoNoPelle,vecFine,utente,ac
 
     % Filtraggio finale con modello (ulteriore pulizia) - POSSIBILE PERDITA
     [volumeAffFilt,~] = filtraCC(volumeAffinato,indiciPalmoNoPelle,vecFine,model,0);
-    graficoVolshow(volumeAffFilt,'Volume affinato filtrato',utente,acquisizione,show);
+    graficoVolshow(volumeAffFilt,'volumeAffFilt - Volume affinato filtrato',"","",show);
 
     %% --- 6) Filling vene: riempimento selettivo delle porzioni sottili ---
     disp('***Filling vene iniziato***');
@@ -198,7 +198,7 @@ function [volumeFilled] = affinaVene(volume,indiciPalmoNoPelle,vecFine,utente,ac
     end
 
     disp('***Filling vene terminato***');
-    graficoVolshow(volumeFilled,'Volume affinato finale',utente,acquisizione,show);
+    graficoVolshow(volumeFilled,'volumeFilled - Volume affinato finale',"","",show);
 
     %% --- 7) Salvataggio su disco (solo se non vuoto) ---
     if ~exist(folderPath, 'dir')

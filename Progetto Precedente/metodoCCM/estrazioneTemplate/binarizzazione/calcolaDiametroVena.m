@@ -1,7 +1,7 @@
 function [diametro] = calcolaDiametroVena(pianoCCvalide, pianoPalmo, y)
 % calcolaDiametroVena Stima il diametro della vena "più plausibile" tra le
-% componenti connesse presenti in una slice C-C (o comunque un piano binario),
-% selezionando la componente più vicina al palmo e filtrando per forma/dimensione.
+% componenti connesse presenti in una slice, selezionando la componente più 
+% vicina al palmo e filtrando per forma/dimensione.
 %
 % INPUT:
 %   - pianoCCvalide : immagine binaria (ZxX) con le regioni candidate (vene) già validate

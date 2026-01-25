@@ -33,20 +33,20 @@ function [volIsolato] = isolaPatternVenoso(volume, utente, acquisizione, show)
     % Qui: si eliminano oggetti < 500 voxel con connettività 6 (più "restrittiva").
     volumeCleaned = bwareaopen(volume, 500, 6);
 
-    % Converte in uint16 (probabilmente per compatibilità con volshow/visualizzazioni)
+    % Converte in uint16 (per compatibilità con volshow/visualizzazioni)
     volumeCleaned = uint16(volumeCleaned);
 
     % Mappa i voxel "1" a 255 (comodo per vedere meglio il binario come immagine)
     volumeCleaned(volumeCleaned == 1) = 255;
 
     % Visualizzazione (qui show=0 quindi non mostra, ma chiamata lasciata "standard")
-    graficoVolshow(volumeCleaned, 'Volume filtrato componenti piccole', utente, acquisizione, 0);
+    graficoVolshow(volumeCleaned, 'volumeCleaned - Volume dopo filtraggio componenti piccole', "", "", show);
 
     % 2) Apertura morfologica 3D: imopen = erosione + dilatazione
     % Serve a rimuovere piccole asperità/rumore e "regolarizzare" le forme.
     % strel('sphere',1): elemento strutturante sferico di raggio 1 voxel.
     volumeOpen = imopen(volumeCleaned, strel('sphere', 1));
-    graficoVolshow(volumeOpen, 'Volume aperto', utente, acquisizione, 0);
+    graficoVolshow(volumeOpen, 'volumeOpen - Volume dopo apertura morfologica', "", "", show);
 
     % 3) Secondo passaggio di bwareaopen, più severo:
     % elimina oggetti < 1000 voxel usando connettività 26 (più "permissiva" nel collegare voxel).
@@ -58,7 +58,7 @@ function [volIsolato] = isolaPatternVenoso(volume, utente, acquisizione, show)
     volumeCleaned(volumeCleaned == 1) = 255;
 
     % Visualizzazione finale (dipende dal flag show passato alla funzione)
-    graficoVolshow(volumeCleaned, 'Volume isolato finale ', utente, acquisizione, show);
+    graficoVolshow(volumeCleaned, 'volumeCleaned - Volume isolato finale ', "", "", show);
 
     % Output finale
     volIsolato = volumeCleaned;

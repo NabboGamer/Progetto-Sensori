@@ -104,7 +104,7 @@ function [volFilt] = filtraComponentiConnesse(volume,minSize,indiciPalmoNoPelle,
     % Preserva anche le componenti minuscole isolate in precedenza
     volFilt = volFilt | volumeCCPalline;
 
-    graficoVolshow(volFilt,'Volume filtrato finale',utente,acquisizione,show);
+    graficoVolshow(volFilt,'volFilt - Volume dopo filtraggio finale',"","",show);
 
     %% --- 8) Salvataggio su disco (solo se non vuoto) ---
     if ~exist(folderPath, 'dir')
